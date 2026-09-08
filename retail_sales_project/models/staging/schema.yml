@@ -1,0 +1,82 @@
+version: 2
+
+models:
+  - name: stg_address
+    description: "Cleans and stages current address records."
+    columns:
+      - name: address_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_customer
+    description: "Cleans and stages current customer records."
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_person
+    description: "Cleans and stages current person records."
+    columns:
+      - name: business_entity_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_product
+    description: "Cleans and stages current product records."
+    columns:
+      - name: product_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_productcategory
+    description: "Cleans and stages current product category records."
+    columns:
+      - name: product_category_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_productsubcategory
+    description: "Cleans and stages current product subcategory records."
+    columns:
+      - name: product_subcategory_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_salesorderdetail
+    description: "Cleans and stages current sales order detail records."
+    columns:
+      - name: sales_order_detail_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_salesorderheader
+    description: "Cleans and stages current sales order header records."
+    columns:
+      - name: sales_order_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_stateprovince
+    description: "Cleans and stages current state province records."
+    columns:
+      - name: state_province_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_countryregion
+    description: "Cleans and stages current country region records."
+    columns:
+      - name: country_region_key
+        tests:
+          - unique
+          - not_null      
