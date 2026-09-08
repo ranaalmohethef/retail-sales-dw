@@ -12,7 +12,9 @@ renamed as (
         storeid as store_id,
         territoryid as territory_id,
         accountnumber as account_number,
-        modifieddate as modified_date
+        try_to_timestamp_ntz(
+    replace(to_varchar(modifieddate), '&', '')
+) as modified_date
     from source
     where dbt_valid_to is null
 
